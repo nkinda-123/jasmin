@@ -50,6 +50,16 @@ app.get('/admin', (req, res) => {
   res.sendFile(path.join(__dirname, 'admin.html'));
 });
 
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Portfolio Backend API',
+    endpoints: {
+      api: 'GET /api/profile - fetch profile data',
+      admin: 'GET /admin - admin page to edit profile'
+    }
+  });
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Backend running on http://localhost:${port}`);
