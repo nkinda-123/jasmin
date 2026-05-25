@@ -51,13 +51,7 @@ app.get('/admin', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.json({ 
-    message: 'Portfolio Backend API',
-    endpoints: {
-      api: 'GET /api/profile - fetch profile data',
-      admin: 'GET /admin - admin page to edit profile'
-    }
-  });
+  res.redirect('/admin');
 });
 
 const port = process.env.PORT || 3000;
