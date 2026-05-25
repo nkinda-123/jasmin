@@ -1,4 +1,7 @@
-const backendUrl = 'http://localhost:3000/api/profile';
+// Determine API base URL from a meta tag (works for deployed frontend)
+const metaApiBase = document.querySelector('meta[name="api-base"]')?.getAttribute('content');
+const apiBase = metaApiBase || (window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://jasmin-portifolior.onrender.com');
+const backendUrl = `${apiBase.replace(/\/$/, '')}/api/profile`;
 
 function updateElement(id, value) {
   const element = document.getElementById(id);
