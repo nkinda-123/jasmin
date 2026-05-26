@@ -12,12 +12,12 @@ function applyProfileData(data) {
   const profile = {
     name: 'Jasmin Athuman Hatibu',
     phone: '0621370679',
-    email: 'jasmin@gmail.com.com',
+    email: 'jasmin@gmail.com',
     module: 'Cloud Computing',
     assignmentTitle: 'Building and Deploying a Personal Portfolio Website Using Cloud Platforms',
     dueDate: '2/06/2026',
     description: 'This portfolio demonstrates frontend build, Vercel deployment, a simple backend API, and Render hosting.',
-    profileImage: 'profile.svg',
+    profileImage: 'profile.jpg',
     skills: [
       { title: 'Frontend', detail: 'HTML, CSS, JavaScript' },
       { title: 'Cloud Hosting', detail: 'Vercel, Render' },
