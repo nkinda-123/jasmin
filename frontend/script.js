@@ -10,9 +10,9 @@ function updateElement(id, value) {
 
 function applyProfileData(data) {
   const profile = {
-    name: 'Jasmin Athman Hatim',
+    name: 'Jasmin Athuman Hatibu',
     phone: '0621370679',
-    email: 'jasmin@example.com',
+    email: 'jasmin@gmail.com.com',
     module: 'Cloud Computing',
     assignmentTitle: 'Building and Deploying a Personal Portfolio Website Using Cloud Platforms',
     dueDate: '2/06/2026',
