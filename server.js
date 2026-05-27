@@ -8,8 +8,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 const profileData = {
-  name: 'Jasmin Athman Hatim',
-  email: 'jasmin@example.com',
+  name: 'jasmin athuman hatibu',
+  email: 'jasminathman@gmail.com',
   phone: '0621370679',
   module: 'Cloud Computing',
   assignmentTitle: 'Building and Deploying a Personal Portfolio Website Using Cloud Platforms',

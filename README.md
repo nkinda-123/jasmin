@@ -1,4 +1,4 @@
-# Jasmin Athman Hatim Portfolio
+# jasmin athuman hatibu Portfolio
 
 A personal portfolio website created as part of the Cloud Computing assignment.
 

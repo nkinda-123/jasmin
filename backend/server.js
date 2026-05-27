@@ -7,8 +7,8 @@ app.use(cors());
 app.use(express.json());
 
 const profileData = {
-  name: 'Jasmin Athuman Hatibu',
-  email: 'jasmin@example.com',
+  name: 'jasmin athuman hatibu',
+  email: 'jasminathman@gmail.com',
   phone: '0621370679',
   module: 'Cloud Computing',
   assignmentTitle: 'Building and Deploying a Personal Portfolio Website Using Cloud Platforms',
@@ -120,7 +120,7 @@ app.get('/admin', (req, res) => {
     const apiBase = '${apiBase}';
     async function loadProfile() {
       try {
-        const response = await fetch(`${apiBase}/api/profile`);
+        const response = await fetch(apiBase + '/api/profile');
         const profile = await response.json();
         document.getElementById('profileJson').textContent = JSON.stringify(profile, null, 2);
         document.getElementById('name').value = profile.name || '';
@@ -130,8 +130,8 @@ app.get('/admin', (req, res) => {
         document.getElementById('assignmentTitle').value = profile.assignmentTitle || '';
         document.getElementById('dueDate').value = profile.dueDate || '';
         document.getElementById('description').value = profile.description || '';
-        document.getElementById('skills').value = (profile.skills || []).map((s) => `${s.title}: ${s.detail}`).join('\n');
-        document.getElementById('projects').value = (profile.projects || []).map((p) => `${p.title} | ${p.description}`).join('\n');
+        document.getElementById('skills').value = (profile.skills || []).map((s) => s.title + ': ' + s.detail).join('\n');
+        document.getElementById('projects').value = (profile.projects || []).map((p) => p.title + ' | ' + p.description).join('\n');
         document.getElementById('profileImage').value = profile.profileImage || '';
       } catch (err) {
         document.getElementById('profileJson').textContent = 'Unable to load profile: ' + err;
@@ -164,7 +164,7 @@ app.get('/admin', (req, res) => {
         profileImage: document.getElementById('profileImage').value,
       };
       try {
-        const response = await fetch(`${apiBase}/api/profile`, {
+        const response = await fetch(apiBase + '/api/profile', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
